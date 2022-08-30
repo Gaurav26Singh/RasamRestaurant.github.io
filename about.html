@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Rasam</title>
+    <link rel="shortcut icon" href="imageedit_1_8852949157.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Taviraj:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url(desk.jpg);
+            background-size: 100% 130vh;
+        }
+
+        .aboutdata {
+            width: 100%;
+            height: 99vh;
+            margin: auto;
+            margin-top: -20px;
+            padding: 40px 0 30px 0;
+        }
+
+        .aimage {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .aimage img {
+            height: 230px;
+            width: 180px;
+            margin-bottom: 1px;
+            border: 1.5px solid black;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
+        }
+
+        .adata {
+
+            padding: 45px 15px 20px 15px;
+            width: 80vw;
+            height: fit-content;
+            border-radius: 10px;
+            background-color: rgb(182, 103, 255);
+            margin: auto;
+        }
+
+        .ad {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .ad i {
+            margin-right: 10px;
+            font-size: 23px;
+        }
+
+        .ad div {
+            font-size: 21px;
+            font-family: 'Taviraj', serif;
+        }
+
+        #about {
+            color: black;
+            background-color: rgb(240, 168, 116);
+        }
+
+        .cartvalue {
+            position: absolute;
+            color: white;
+            background-color: crimson;
+            padding: 2px 7px 2px 7px;
+            border-radius: 50%;
+            top: 2vh;
+
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+        }
+
+
+        @media(max-height:650px)
+         {
+            body
+            {
+                background: url(wesley-tingey-ZdOW9Qd8mQo-unsplash.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            
+            .aboutdata
+            {
+                height: auto;
+            }
+         }
+        @media(max-width:850px) {
+
+            body
+            {
+                background: url(wesley-tingey-ZdOW9Qd8mQo-unsplash.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            .aimage
+            {
+                margin-bottom: 30px;
+            }
+            .aimage img
+            {
+                height: 400px;
+                width: 350px;
+            }
+            .adata
+            {
+               padding: 30px;
+            }
+            #about {
+                color: white;
+                background-color: black;
+            }
+
+            .cartvalue
+        {
+           
+            right: 0.3vw;
+            top: 0.8vh;
+            padding: 2.5px 6px 2.5px 6px;
+            font-size: 13px;
+        }
+
+        }
+
+        @media(max-width:650px)
+         {
+            body
+            {
+                background: url(wesley-tingey-ZdOW9Qd8mQo-unsplash.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+
+        }
+
+        @media(max-width:450px) {
+
+            .aboutdata
+            {
+                height: auto;
+            }
+            .aimage img
+            {
+                height: 280px;
+                width: 230px;
+            }
+            .aimage {
+                padding-top: 45px;
+            }
+        }
+    </style>
+
+</head>
+<body onload="webview()">
+    <div class="preloader"></div>
+    <div class="secondary">
+        <div class="display"><a href="index.html"><img
+                    src="https://rasamrest.com/wp-content/uploads/2018/08/mainlogo.png" alt=""></a></div>
+        <div class="sbox">
+            <input type="search" id="search" placeholder="Search for all kinds of Dishes & Cuisines......">
+        </div>
+        <a href="cart.html">
+            <i class="fa-solid fa-cart-shopping" id="cart"></i>
+            <div class="cartvalue">0</div>
+        </a>
+
+    </div>
+    <div class="pos">
+        <button class="but" onclick="run()"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <header>
+
+        <ul class="nav">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;Home</a></li>
+            <li><a href="services.html"><i class="fa-brands fa-servicestack"></i>&nbsp;&nbsp;Services</a></li>
+            <li><a href="celebrate.html" id="celebrate"><i
+                        class="fa-solid fa-cake-candles"></i></i>&nbsp;&nbsp;Celebrate</a></li>
+            <li><a href="outlet.html"><i class="fa-solid fa-store"></i>&nbsp;&nbsp;Outlets</a></li>
+            <li><a href="about.html" id="about"><i class="fa-solid fa-bullhorn"></i>&nbsp;&nbsp;About Us</a></li>
+            <li><a href="contact.html" id="contact"><i class="fa-solid fa-headset"></i>&nbsp;&nbsp;Contact Us</a></li>
+            <div class="social"><a href="https://api.whatsapp.com/send?phone=7667477957"><i
+                        class="fa-brands fa-whatsapp" id="what"></i></a><i class="fa-brands fa-facebook"
+                    id="face"></i><i class="fa-brands fa-instagram" id="insta"></i><i class="fa-brands fa-twitter"
+                    id="tweet"></i></div>
+        </ul>
+        <div class="pos2">
+            <button class="but2" onclick="back()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </header>
+    <br>
+    <div class="aboutdata">
+        <div class="aimage">
+            <img src="IMG_20220729_173017.jpg" alt="">
+        </div>
+        <div class="adata">
+            <div class="ad">
+                <i class="fa-solid fa-arrow-right"></i>
+                <div>This website is created, designed & maintained by myself, Gaurav Singh.</div>
+            </div>
+            <div class="ad">
+                <i class="fa-solid fa-arrow-right"></i>
+                <div>I started creating this website on 25<sup>th</sup> July,2022.</div>
+            </div>
+            <div class="ad">
+                <i class="fa-solid fa-arrow-right"></i>
+                <div>This website work complted on 4<sup>th</sup> August,2022.</div>
+            </div>
+            <div class="ad">
+                <i class="fa-solid fa-arrow-right"></i>
+                <div>This website is created using HTML, CSS & JavaScript. There in no copy of ideas.</div>
+            </div>
+            <div class="ad"><i class="fa-solid fa-arrow-right"></i>
+                <div>This website is created after dedicating whole day since 25<sup>th</sup> July.</div>
+            </div>
+            <div class="ad"><i class="fa-solid fa-arrow-right"></i>
+                <div>Total length of code for this website is around 5600 lines.</div>
+            </div>
+            <!-- <div class="ad">
+                <i class="fa-solid fa-arrow-right"></i><div>A special thank to Dua Lipa, Zara Larsson, Ava Max, Kyle, David Guetta & Camila Cabello for keeping me motivated and concentrated towads my work through their songs.</div>
+            </div> -->
+        </div>
+    </div>
+    <footer>
+        <div class="footerdata"><i class="fa-regular fa-copyright" id="cr"></i> 2022 Rasam Restaurant &nbsp;|
+            &nbsp;Designed by - <span class="person">Gaurav Singh &nbsp;|</span><span class="footsocial"><a
+                    href="https://api.whatsapp.com/send?phone=7667477957"><i class="fa-brands fa-whatsapp"
+                        id="what"></i></a><i class="fa-brands fa-facebook" id="face"></i><i
+                    class="fa-brands fa-instagram" id="insta"></i><i class="fa-brands fa-twitter" id="tweet"></i><a
+                    href="mailto:gauravsinghgyan26@gmail.com"><i class="fa-regular fa-envelope"
+                        id="mail"></i></a></span></div>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+        let totalrep = document.getElementsByClassName('cartvalue')[0];
+        totalrep.innerHTML = Number(localStorage.getItem("totalvalues")) + Number(localStorage.getItem("totalvaluep")) + Number(localStorage.getItem("totalvaluen")) + Number(localStorage.getItem("totalvaluec")) + Number(localStorage.getItem("totalvalued"));
+    </script>
+
+</body>
+
+</html>

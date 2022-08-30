@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrate | Rasam</title>
+    <link rel="shortcut icon" href="imageedit_1_8852949157.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+     body
+        {
+            background-image: url(brandon-erlinger-ford-wI2Hafqr_f4-unsplash.jpg);
+            background-position: center;
+            background-size: 100%,100vh;
+        }
+     .cdata
+     {
+        margin-top: -20px;
+        width: 100%;
+         height: 90vh;
+         top: 0px;
+        position: static;
+        padding-top: 15px;
+     }
+     .cdata h2
+     {
+        text-align: center;
+        color: white;
+        font-size: 35px;
+        text-shadow: 0 0 15px greenyellow;
+     }
+     .cdata h3
+     {
+        padding-top: 25px;
+        text-align: center;
+        font-size: 25px;
+        color: greenyellow;
+     }
+     .cdata .cbox
+     {
+        width: 40vw;
+        height: 60px;
+        overflow: hidden;
+        margin: auto;
+        margin-bottom: 25px;
+        border: 3px solid black;
+        border-radius: 8px;
+        transition: 0.7s;
+     }
+     .cdata p
+     {
+        padding: 12.5px 10px 12.5px 10px;
+        font-size: 23px;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+     }
+     .cdata p button
+     {
+        font-size: 23px;
+        
+        right: 0;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        margin-left: 10px;
+        cursor: pointer;
+        
+        right: 0;
+     }
+     .offers
+     {
+        width: 100vw;
+        margin-top: 50px;
+        padding: 10px 0 10px 0;
+        
+     }
+     #cbox1
+     {
+        background-color: rgb(255, 223, 40);
+        box-shadow: 0 0 20px rgb(255, 223, 40) ;
+     }
+     #cbox2
+     {
+        background-color: silver;
+        box-shadow: 0 0 20px silver;
+     }
+     #cbox3
+     {
+        background-color: rgb(181, 58, 58);
+        box-shadow: 0  0 20px rgb(181, 58, 58);
+     }
+     .hour,.cost
+     {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+     }
+     .book
+     {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+     .book button
+     {
+        width: 20%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 5px;
+        border: none;
+        padding: 3px;
+        cursor: pointer;
+     }
+     .answer
+     {
+        padding: 15px 15px 10px 15px;
+        font-family: 'Source Sans Pro', sans-serif;
+     }
+     #celebrate
+     {
+      color: black;
+                background-color: rgb(240, 168, 116);
+     }
+
+     .cartvalue
+        {
+            position:absolute;
+            color:white;
+            background-color: crimson;
+            padding: 2px 7px 2px 7px;
+            border-radius: 50%;
+            top: 2vh;
+            
+        }
+     @media(max-width:900px)
+     {
+        .cdata{
+            padding-top: 90px;
+
+        }
+
+        .cdata h3
+     {
+        padding-top: 20px;
+        font-size: 20px;
+        
+     }
+
+     .cdata .cbox
+     {
+        width: 55vw;
+        
+     }
+
+     .cdata p
+     {
+        font-size: 21px;
+     }
+
+     .offers
+     {
+        
+        margin-top: 30px;
+        
+     }
+
+     .answer
+     {
+        padding: 2px 10px 5px 10px;
+        text-align: justify;
+        font-size: 15px;
+        font-family: 'Source Sans Pro', sans-serif;
+     }
+
+     .book button
+     {
+        width: 50%;
+       
+     }
+
+    }
+    @media(max-width:850px)
+    {
+
+      body
+      {
+         background: url(dawid-labno-tZTLzyz4-xI-unsplash.jpg);
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+      }
+      #celebrate
+      {
+         color: white;
+                background-color: black;
+      }
+
+      .cartvalue
+        {
+           
+            right: 0.3vw;
+            top: 0.8vh;
+            padding: 2.5px 6px 2.5px 6px;
+            font-size: 13px;
+        }
+
+
+  
+
+    @media(max-width:450px)
+{
+    
+       .cdata
+       {
+         height: 97vh;
+       }
+
+     .cdata .cbox
+     {
+        width: 80vw;
+        
+     }
+
+     .cdata p
+     {
+        font-size: 17px;
+     }
+
+     .offers
+     {
+        
+        margin-top: 30px;
+        
+     }
+
+     .answer
+     {
+        padding: 2px 10px 5px 10px;
+        text-align: justify;
+        font-size: 14px;
+        font-family: 'Source Sans Pro', sans-serif;
+     }
+
+     .book button
+     {
+        width: 60%;
+       
+     }
+    
+
+
+}
+    }
+    </style>
+       
+</head>
+<body>
+    <div class="secondary">
+      <div class="display"><a href="index.html"><img src="https://rasamrest.com/wp-content/uploads/2018/08/mainlogo.png" alt=""></a></div>
+        <div class="sbox">
+            <input type="search" id="search" placeholder="Search for all kinds of Dishes & Cuisines......">
+        </div>
+        <a href="cart.html">
+         <i class="fa-solid fa-cart-shopping" id="cart"></i>
+         <div class="cartvalue">0</div>
+     </a>
+
+    </div>
+    <div class="pos">
+        <button class="but" onclick="run()"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <header>
+
+        <ul class="nav">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;Home</a></li>
+            <li><a href="services.html"><i class="fa-brands fa-servicestack"></i>&nbsp;&nbsp;Services</a></li>
+            <li><a href="celebrate.html" id="celebrate"><i class="fa-solid fa-cake-candles"></i></i>&nbsp;&nbsp;Celebrate</a></li>
+            <li><a href="outlet.html"><i class="fa-solid fa-store"></i>&nbsp;&nbsp;Outlets</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-bullhorn"></i>&nbsp;&nbsp;About Us</a></li>
+            <li><a href="contact.html" id="contact"><i class="fa-solid fa-headset"></i>&nbsp;&nbsp;Contact Us</a></li>
+            <div class="social"><i class="fa-brands fa-whatsapp" id="what"></i><i class="fa-brands fa-facebook"
+                    id="face"></i><i class="fa-brands fa-instagram" id="insta"></i><i class="fa-brands fa-twitter"
+                    id="tweet"></i></div>
+        </ul>
+        <div class="pos2">
+            <button class="but2" onclick="back()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </header>
+    <br>
+    
+           <div class="cdata">
+            <h2>Celebrate With Us</h2>
+            <h3>If you want to throw a party, here we are with amazing offers</h3>
+            <div class="offers">
+            <div class="cbox" id="cbox1">
+                <p onclick="fire1()">Premium Plan <button><i class="fa-solid fa-angle-down"></i></button></p>
+                <div class="answer">
+                This is the best plan we offer. It comes with top quality of service and unlmited food. The decoration will be of world class.All the necessary arrangement will be managed by us.</div>
+                <div class="hour">Total Hours: 6hr</div>
+                <div class="cost">Rs.6000</div>
+                <div class="book"><button>Book Now</button></div>
+            </div>
+            <div class="cbox" id="cbox2">
+                <p onclick="fire2()">Silver Plan<button><i class="fa-solid fa-angle-down"></i></button></p>
+                <div class="answer">
+                    This is also one of the best plan we offer. It comes with best quality of food. The decoration will be charged separately according to theirr choice.All the necessary arrangement will be managed by us.</div>
+                    <div class="hour">Total Hours: 4hr</div>
+                    <div class="cost">Rs.4500</div>
+                    <div class="book"><button>Book Now</button></div>
+            </div>
+            <div class="cbox" id="cbox3">
+                <p onclick="fire3()">Basic Plan<button><i class="fa-solid fa-angle-down"></i></button></p>
+                <div class="answer">
+                    This is the most affordable plan we offer. It comes with top quality of service and food will be charged separately. The decoration will also be charged separately. All the necessary arrangement will be managed by us.</div>
+                    <div class="hour">Total Hours: 3hr</div>
+                    <div class="cost">Rs.3000</div>
+                    <div class="book"><button>Book Now</button></div>
+            </div>
+        </div>
+           </div>
+           <footer>
+            <div class="footerdata"><i class="fa-regular fa-copyright" id="cr"></i> 2022 Rasam Restaurant &nbsp;| &nbsp;Designed by - <span class="person">Gaurav Singh &nbsp;|</span><span class="footsocial"><a href="https://api.whatsapp.com/send?phone=7667477957"><i class="fa-brands fa-whatsapp" id="what"></i></a><i class="fa-brands fa-facebook" id="face"></i><i class="fa-brands fa-instagram" id="insta"></i><i class="fa-brands fa-twitter"
+                id="tweet"></i><a href="mailto:gauravsinghgyan26@gmail.com"><i class="fa-regular fa-envelope" id="mail"></i></a></span></div>
+        </footer>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+      
+        let cb1 = document.getElementById('cbox1');
+        let cb2 = document.getElementById('cbox2');
+        let cb3 = document.getElementById('cbox3');
+        cb1.style.height ="60px";
+        cb2.style.height ="60px";
+        cb3.style.height ="60px";
+        function fire1()
+       {
+        if(cb1.style.height =="60px")
+        {
+            cb2.style.height ="60px"
+            cb3.style.height ="60px"
+            cb1.style.height ="36vh";
+        }
+
+        else
+        {
+            cb1.style.height ="60px";
+        }
+       }
+       function fire2()
+       {
+        if(cb2.style.height =="60px")
+        {
+            cb1.style.height ="60px"
+            cb3.style.height ="60px"
+            cb2.style.height ="37vh";
+        }
+
+        else
+        {
+           
+            cb2.style.height ="60px";
+        }
+       }
+       function fire3()
+       {
+        if(cb3.style.height =="60px")
+        {
+            cb1.style.height ="60px"
+            cb2.style.height ="60px"
+            cb3.style.height ="38vh";
+        }
+
+        else
+        {
+            cb3.style.height ="60px";
+        }
+       }
+       
+         let totalrep = document.getElementsByClassName('cartvalue')[0];
+         totalrep.innerHTML= Number(localStorage.getItem("totalvalues"))+ Number(localStorage.getItem("totalvaluep")) +Number(localStorage.getItem("totalvaluen"))+ Number(localStorage.getItem("totalvaluec"))+Number(localStorage.getItem("totalvalued"));
+    
+    </script>
+   
+</body>
+</html>

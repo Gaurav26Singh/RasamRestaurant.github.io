@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | Rasam</title>
+    <link rel="shortcut icon" href="imageedit_1_8852949157.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Taviraj:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body
+        {
+            background: url(santa.jpg);
+            background-position: center;
+            background-size: 100%,100vh;
+        }
+        table
+        {
+            background: url(kiwihug-qv05FvdE26k-unsplash.jpg);
+            background-position: center;
+            background-size: 100%,100vh;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border: 1px solid black;
+            padding-top: 15px;
+            padding-bottom: 35px;
+            margin: auto;
+            width: 50vw;
+            height: 79vh;
+            margin-bottom: 25px;
+        }
+
+       .dish
+       {
+        display: flex;
+        padding-top: 14px;
+        justify-content: space-between;
+       }
+       .testing
+        {
+            display: flex;
+            margin-left: 25px;
+            width: 100px;
+            
+        }
+        .virtualwaiter
+        {
+            height: 25px;
+            width:33.3%;
+            font-size: 15px;
+            border: 1px solid black;
+        }
+        .cquantity,.squantity,.nquantity,.pquantity,.dquantity
+        {
+            height: 25px;
+            width:33.4%;
+            text-align: center;
+            padding-top: 1px;
+            font-weight: bold;
+            font-size: 17px;
+            border:1px solid black;
+            background-color: whitesmoke;
+        }
+       #add
+        {
+            background-color: rgb(68, 249, 68);
+        }
+        #sub
+        {
+            background-color: rgb(255, 60, 60);
+        }
+        .cartvalue
+        {
+            position:absolute;
+            color:white;
+            background-color: crimson;
+            padding: 2px 7px 2px 7px;
+            border-radius: 50%;
+            top: 2vh;
+            
+        }
+       td
+       {
+        margin-left: 5px;
+        height: 2px;
+        text-align: center;
+        font-size: 17px;
+        padding: 0;
+         font-weight: bold;
+         margin-bottom: 33px;
+       }
+
+       #listprice
+       {
+        padding-top: 35px;
+        height: fit-content;
+       }
+       .farebreakup
+       {
+        border : 1px solid black;
+        background-color: rgb(228, 221, 221);
+       padding: 10px;
+        width: 70%;
+        line-height: 45px;
+        margin: auto;
+        font-size: 18.5px;
+        font-weight: bold;
+        font-family: 'Padauk', sans-serif;
+       }
+       
+        .tc,.tax,.dc,.tp
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        th
+        {
+            height: 85px;
+            font-size: 21px;
+            padding-bottom: 30px;
+            margin-right: 15px;
+        }
+        .paynow
+        {
+            padding: 10px;
+            margin-top: 15px;
+            font-size: 20px;
+            background-color:rgb(255, 71, 169);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            width: 50%;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .paynow:hover
+        {
+            background-color: white;
+            color:rgb(255, 71, 169);
+            box-shadow: 0 0 20px rgb(255, 71, 169);
+        }
+        .totalpricec,.totalprices,.totalpricen,.totalpricep,.totalpriced
+        {
+           font-size: 18px;
+           text-shadow: 0 0 15px white;
+        }
+        .quicklink
+        {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            margin-left: 25px;
+            line-height: 45px;
+        }
+        .quicklink h2
+        {
+            margin-left: -15px;
+        }
+        .quicklink a
+        {
+            text-decoration: none;
+            font-size: 20px;
+           color: blue;
+           font-weight: bold;
+           
+        }
+        .footer
+        {
+            position: absolute;
+            bottom: 0px;
+        }
+        .empty
+        {
+            display: none;
+
+        }
+        .empty img
+        {
+           margin-top:-200px;
+            height: 300px;
+            width: 300px;
+            
+        }
+
+        @media(max-width:1100px)
+        {
+            .quicklink h2
+        {
+           font-size: 17px;
+        }
+        }
+        @media(max-width:900px)
+        {
+            table
+            {
+                width: 60vw;
+                height: 87vh;
+                margin-top: 50px;
+            }
+
+            .dish
+            {
+                padding-top: 23px;
+            }
+           
+        .quicklink
+        {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 99.5vw;
+            margin: auto;
+            
+        }
+        .quicklink h2
+        {
+            display: none;
+        }
+        .quicklink a
+        {
+            font-size: 16px;
+        }
+    }
+        
+        @media(max-width:850px)
+        {
+            table
+            {
+                width: 90vw;
+                height: 87vh;
+            }
+            .cartvalue
+        {
+           
+            right: 0.3vw;
+            top: 0.8vh;
+            padding: 2.5px 6px 2.5px 6px;
+            font-size: 13px;
+        }
+
+           
+        
+       
+        }
+
+        @media(max-width:750px)
+        {
+            table
+            {
+                margin-top: 125px;
+            }
+        
+            .quicklink
+            {
+                margin-top: 75px;
+            }
+        }
+        @media(max-width:650px)
+        {
+            table
+            {
+                margin-top: 115px;
+            }
+
+            .quicklink
+            {
+                margin-top: 65px;
+            }
+           th
+           {
+            font-size: 15px;
+           }
+        
+        }
+
+        @media(max-width:490px)
+        {
+            table
+            {
+                margin-top: 35px;
+                width: 100vw;
+                height: 81vh;
+                margin-bottom: 0;
+                border: none;
+            }
+
+            .quicklink
+            {
+                margin-top: 55px;
+                border-bottom: 1px solid black;
+            }
+
+            .quicklink a
+            {
+                font-size: 11.5px;
+            }
+
+            td
+            {
+                padding: 10px 0px 10px 0px;
+                font-size: 13px;
+            }
+            th
+        {
+           
+            padding-top: 65px;
+            font-size: 14px;
+            padding-bottom: 10px;
+        }
+        .testing
+        {
+            width: 75px;
+            margin-left: -10px;
+            
+        }
+        
+        .farebreakup
+       {
+        
+        width: 80%;
+        line-height: 35px;
+        margin: auto;
+        font-size: 18px;
+      
+       }
+
+        .virtualwaiter
+        {
+            height: 22px;
+            width:33.3%;
+            font-size: 19px;
+            border: 1px solid black;
+        }
+
+        .cquantity,.squantity,.nquantity,.pquantity,.dquantity
+       {
+            height: 22px;
+            font-size: 15px;
+       }
+        .quan,.quantityc,.quantitys,.quantityn,.quantityp,.quantityd
+        {
+            display: none;
+            
+        }
+
+        .totalpricec,.totalprices,.totalpricen,.totalpricep,.totalpriced
+        {
+           font-size: 13px;
+           text-shadow: 0 0 15px white;
+        }
+    }
+    </style>
+       
+</head>
+<body>
+    <div class="secondary">
+        <div class="display"><a href="index.html"><img src="https://rasamrest.com/wp-content/uploads/2018/08/mainlogo.png" alt=""></a></div>
+        <div class="sbox">
+            <input type="search" id="search" placeholder="Search for all kinds of Dishes & Cuisines......">
+        </div>
+        <a href="cart.html">
+            <i class="fa-solid fa-cart-shopping" id="cart"></i>
+            <div class="cartvalue">0</div>
+        </a>
+
+    </div>
+    <div class="pos">
+        <button class="but" onclick="run()"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <header>
+
+        <ul class="nav">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;Home</a></li>
+            <li><a href="services.html"><i class="fa-brands fa-servicestack"></i>&nbsp;&nbsp;Services</a></li>
+            <li><a href="celebrate.html" id="celebrate"><i class="fa-solid fa-cake-candles"></i></i>&nbsp;&nbsp;Celebrate</a></li>
+            <li><a href="outlet.html"><i class="fa-solid fa-store"></i>&nbsp;&nbsp;Outlets</a></li>
+            <li><a href="about.html" id="about"><i class="fa-solid fa-bullhorn"></i>&nbsp;&nbsp;About Us</a></li>
+            <li><a href="contact.html" id="contact"><i class="fa-solid fa-headset"></i>&nbsp;&nbsp;Contact Us</a></li>
+            <div class="social"><a href="https://api.whatsapp.com/send?phone=7667477957"><i class="fa-brands fa-whatsapp" id="what"></i></a><i class="fa-brands fa-facebook"
+                    id="face"></i><i class="fa-brands fa-instagram" id="insta"></i><i class="fa-brands fa-twitter"
+                    id="tweet"></i></div>
+        </ul>
+        <div class="pos2">
+            <button class="but2" onclick="back()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </header>
+    <br>
+    <div class="quicklink">
+        <h2>Forgot Something?</h2>
+        <a href="chinese.html">Chinese</a>
+        <a href="southindian.html">South Indian</a>
+        <a href="northindian.html">North Indian</a>
+        <a href="pizza.html">Pizzas</a>
+        <a href="dessert.html">Dessserts</a>
+    </div>
+    <table>
+        <tr>
+            <th>Dish</th>
+            <th>Price (₹)</th>
+            <th class="quan">Quantity</th>
+            <th>Total</th>
+        </tr>
+        
+        <tr>
+            <td class="dish">Veg Manchurian <div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(0,'c')">-</button>
+                <div class="cquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(0,'c')">+</button>
+            </div>
+        </div></td>
+            <td class="pricec">180</td>
+            <td class="quantityc"></td>
+            <td class="totalpricec"></td>
+        </tr>
+        <tr>
+            <td class="dish">Veg Noodles <div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(1,'c')">-</button>
+                <div class="cquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(1,'c')">+</button>
+            </div></td>
+            <td class="pricec">120</td>
+            <td class="quantityc"></td>
+            <td class="totalpricec"></td>
+        </tr>
+        <tr>
+            <td class="dish">Veg Momos<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(2,'c')">-</button>
+                <div class="cquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(2,'c')">+</button>
+            </div></td>
+            <td class="pricec">150</td>
+            <td class="quantityc"></td>
+            <td class="totalpricec"></td>
+        </tr>
+        <tr>
+            <td class="dish">Veg Manchaw Soup<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(3,'c')">-</button>
+                <div class="cquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(3,'c')">+</button>
+            </div></td>
+            <td class="pricec">100</td>
+            <td class="quantityc"></td>
+            <td class="totalpricec"></td>
+        </tr>
+        <tr>
+            <td class="dish">Honey Chilli Potato<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(4,'c')">-</button>
+                <div class="cquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(4,'c')">+</button>
+            </div></td>
+            <td class="pricec">130</td>
+            <td class="quantityc"></td>
+            <td class="totalpricec"></td>
+        </tr>
+        <tr>
+            <td class="dish">Masala Dosa<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(0,'s')">-</button>
+                <div class="squantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(0,'s')">+</button>
+            </div>
+            </td>
+            <td class="prices">140</td>
+            <td class="quantitys"></td>
+            <td class="totalprices"></td>
+        </tr>
+        <tr>
+            <td class="dish">Idli<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(1,'s')">-</button>
+                <div class="squantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(1,'s')">+</button></div>
+            </td>
+            <td class="prices">80</td>
+            <td class="quantitys"></td>
+            <td class="totalprices"></td>
+        </tr>
+        <tr>
+            <td class="dish">Vada<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(2,'s')">-</button>
+                <div class="squantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(2,'s')">+</button></div>
+            </td>
+            <td class="prices">110</td>
+            <td class="quantitys"></td>
+            <td class="totalprices"></td>
+        </tr>
+        <tr>
+            <td class="dish">Appam<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(3,'s')">-</button>
+                <div class="squantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(3,'s')">+</button></div>
+            </td>
+            <td class="prices">100</td>
+            <td class="quantitys"></td>
+            <td class="totalprices"></td>
+        </tr>
+        <tr>
+            <td class="dish">Cocunut Rice
+                <div class="testing"><button id="sub" class="virtualwaiter" onclick="sub(4,'s')">-</button>
+                <div class="squantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(4,'s')">+</button></div>
+            </td>
+            <td class="prices">90</td>
+            <td class="quantitys"></td>
+            <td class="totalprices"></td>
+        </tr>
+
+        <tr>
+            <td class="dish">Paneer Butter Masala<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(0,'n')">-</button>
+                <div class="nquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(0,'n')">+</button></div>
+
+            </td>
+            <td class="pricen">250</td>
+            <td class="quantityn"></td>
+            <td class="totalpricen"></td>
+        </tr>
+        <tr>
+            <td class="dish">Dal Makhni<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(1,'n')">-</button>
+                <div class="nquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(1,'n')">+</button></div>
+
+            </td>
+            <td class="pricen">140</td>
+            <td class="quantityn"></td>
+            <td class="totalpricen"></td>
+        </tr>
+        <tr>
+            <td class="dish">Matar Paneer<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(2,'n')">-</button>
+                <div class="nquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(2,'n')">+</button></div>
+
+            </td>
+            <td class="pricen">190</td>
+            <td class="quantityn"></td>
+            <td class="totalpricen"></td>
+        </tr>
+        <tr>
+            <td class="dish">Butter Naan<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(3,'n')">-</button>
+                <div class="nquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(3,'n')">+</button></div>
+
+            </td>
+            <td class="pricen">60</td>
+            <td class="quantityn"></td>
+            <td class="totalpricen"></td>
+        </tr>
+        <tr>
+            <td class="dish">Malai Kofta<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(4,'n')">-</button>
+                <div class="nquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(4,'n')">+</button></div>
+
+            </td>
+            <td class="pricen">130</td>
+            <td class="quantityn"></td>
+            <td class="totalpricen"></td>
+        </tr>
+
+        <tr>
+            <td class="dish">Margherita Pizza<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(0,'p')">-</button>
+                <div class="pquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(0,'p')">+</button></div></td>
+            <td class="pricep">180</td>
+            <td class="quantityp"></td>
+            <td class="totalpricep"></td>
+        </tr>
+        <tr>
+            <td class="dish">Corn & Cheese Pizza<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(1,'p')">-</button>
+                <div class="pquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(1,'p')">+</button></div></td>
+            <td class="pricep">200</td>
+            <td class="quantityp"></td>
+            <td class="totalpricep"></td>
+        </tr>
+        <tr>
+            <td class="dish">Overload Cheese Pizza<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(2,'p')">-</button>
+                <div class="pquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(2,'p')">+</button></div></td>
+            <td class="pricep">220</td>
+            <td class="quantityp"></td>
+            <td class="totalpricep"></td>
+        </tr>
+        <tr>
+            <td class="dish">Peppy Paneer<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(3,'p')">-</button>
+                <div class="pquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(3,'p')">+</button></div></td>
+            <td class="pricep">250</td>
+            <td class="quantityp"></td>
+            <td class="totalpricep"></td>
+        </tr>
+        <tr>
+            <td class="dish">Indi Tandoori Paneer<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(4,'p')">-</button>
+                <div class="pquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(4,'p')">+</button></div></td>
+            <td class="pricep">230</td>
+            <td class="quantityp"></td>
+            <td class="totalpricep"></td>
+        </tr>
+
+        <tr>
+            <td class="dish">Gulab Jamun<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(0,'d')">-</button>
+                <div class="dquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(0,'d')">+</button></div></td>
+            <td class="priced">40</td>
+            <td class="quantityd"></td>
+            <td class="totalpriced"></td>
+        </tr>
+        <tr>
+            <td class="dish">Rasgulla<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(1,'d')">-</button>
+                <div class="dquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(1,'d')">+</button></div></td>
+            <td class="priced">50</td>
+            <td class="quantityd"></td>
+            <td class="totalpriced"></td>
+        </tr>
+        <tr>
+            <td class="dish">Falooda<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(2,'d')">-</button>
+                <div class="dquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(2,'d')">+</button></div></td>
+            <td class="priced">95</td>
+            <td class="quantityd"></td>
+            <td class="totalpriced"></td>
+        </tr>
+        <tr>
+            <td class="dish">Chococlate Pastry<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(3,'d')">-</button>
+                <div class="dquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(3,'d')">+</button></div></td>
+            <td class="priced">65</td>
+            <td class="quantityd"></td>
+            <td class="totalpriced"></td>
+        </tr>
+        <tr>
+            <td class="dish">Ice-cream<div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(4,'d')">-</button>
+                <div class="dquantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(4,'d')">+</button></div></td>
+            <td class="priced">75</td>
+            <td class="quantityd"></td>
+            <td class="totalpriced"></td>
+        </tr>
+        <tr>
+            <td colspan="4" id="listprice">
+                <div class="farebreakup"> 
+                   <div class="tc"> <div class="tctext">Total Cart value :</div>  <div class="totalcv"></div></div>
+                <div class="tax"> <div class="taxtext">GST(5%) :</div><div class="gst"></div></div>
+                <div class="dc"><div class="dctext">Delivery Charge :</div>  <div class="delcharge">₹ 25</div></div>
+                <div class="tp"><div class="tptext">Total Amount to be paid :</div>  <div class="tpd"></div></div>
+            </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" id="pay"><button class="paynow">Pay Now</button></td>
+        </tr>
+        <tr id="empimg"> 
+            <td colspan="4" class="empty">
+                <img src="https://mymeatfactory.com/assets/fe/img/empty-cart.png" alt="">
+            </td>
+        </tr>
+    </div>
+    </table>
+    <footer>
+        <div class="footerdata"><i class="fa-regular fa-copyright" id="cr"></i> 2022 Rasam Restaurant &nbsp;| &nbsp;Designed by - <span class="person">Gaurav Singh &nbsp;|</span><span class="footsocial"><a href="https://api.whatsapp.com/send?phone=7667477957"><i class="fa-brands fa-whatsapp" id="what"></i></a><i class="fa-brands fa-facebook" id="face"></i><i class="fa-brands fa-instagram" id="insta"></i><i class="fa-brands fa-twitter"
+            id="tweet"></i><a href="mailto:gauravsinghgyan26@gmail.com"><i class="fa-regular fa-envelope" id="mail"></i></a></span></div>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+        let totalcartc = 0;
+        let totalcarts = 0;
+        let totalcartn = 0;
+        let totalcartp = 0;
+         let totalcartd = 0;
+         let total = 0;
+         let count = [0,0,0,0,0];
+         let totalrep = document.getElementsByClassName('cartvalue')[0];
+         totalrep.innerHTML= Number(localStorage.getItem("totalvalues"))+ Number(localStorage.getItem("totalvaluep")) +Number(localStorage.getItem("totalvaluen"))+ Number(localStorage.getItem("totalvaluec"))+Number(localStorage.getItem("totalvalued"));
+        
+         for(i=0;i<5;i++)
+         {
+            document.getElementsByClassName('cquantity')[i].innerHTML = localStorage.getItem(`quantityc${i}`);
+            document.getElementsByClassName('squantity')[i].innerHTML = localStorage.getItem(`quantitys${i}`);
+            document.getElementsByClassName('nquantity')[i].innerHTML = localStorage.getItem(`quantityn${i}`);
+            document.getElementsByClassName('pquantity')[i].innerHTML = localStorage.getItem(`quantityp${i}`);
+            document.getElementsByClassName('dquantity')[i].innerHTML = localStorage.getItem(`quantityd${i}`);
+         }
+
+         function add(i,type)
+        {
+           
+                count[i] = localStorage.getItem(`quantity${type}${i}`);
+            count[i]++;
+            
+            if(count[i]>5)
+            {
+                count[i]--;
+                alert("Any dish cannot be added more than 5");
+            }
+            else{
+                
+                var quantity = document.getElementsByClassName(`${type}quantity`)[i];
+                localStorage.setItem(`quantity${type}${i}`,count[i]);
+                quantity.innerHTML = count[i];
+                helpme(type);
+                location.reload();
+                
+            }
+            
+           
+        }
+        function sub(i,type)
+        {
+            count[i] = localStorage.getItem(`quantity${type}${i}`);
+            count[i]--;
+            if(count[i]<0)
+            {
+                count[i]=0;
+            }
+            if(count[i]==5)
+            {
+                count[i]--;
+            }
+
+            var quantity = document.getElementsByClassName(`${type}quantity`)[i];
+            localStorage.setItem(`quantity${type}${i}`,count[i]);
+                quantity.innerHTML =  count[i];
+                helpme(type);
+                location.reload();
+
+        }
+        function helpme(type)
+        {
+            total=0;
+           
+        
+                for(t=0;t<5;t++)
+        {
+            total = total + Number(localStorage.getItem(`quantity${type}${t}`));
+        }
+        localStorage.setItem(`totalvalue${type}`,total);
+            
+            
+        
+         totalrep.innerHTML= Number(localStorage.getItem("totalvalues"))+ Number(localStorage.getItem("totalvaluep")) +Number(localStorage.getItem("totalvaluen"))+ Number(localStorage.getItem("totalvaluec"))+Number(localStorage.getItem("totalvalued"));
+        }
+        for(i=0;i<5;i++)
+        {
+            if( (localStorage.getItem(`quantityc${i}`)==0) || (localStorage.getItem(`quantityc${i}`)==null))
+            {
+                document.getElementsByTagName('tr')[i+1].style.display = "none"
+            }
+            else
+            {
+              
+                let reqdata = document.getElementsByClassName('pricec')[i].innerHTML;
+                document.getElementsByClassName('quantityc')[i].innerHTML=localStorage.getItem(`quantityc${i}`);
+                document.getElementsByClassName('totalpricec')[i].innerHTML="₹ " + (Number(localStorage.getItem(`quantityc${i}`))*Number(reqdata));
+                totalcartc = totalcartc + (Number(localStorage.getItem(`quantityc${i}`))*Number( document.getElementsByClassName('pricec')[i].innerHTML));
+            }
+            
+        }
+        for(i=0;i<5;i++)
+        {
+            if( (localStorage.getItem(`quantitys${i}`)==0) || (localStorage.getItem(`quantitys${i}`)==null))
+            {
+                document.getElementsByTagName('tr')[i+6].style.display = "none"
+            }
+            else
+            {
+                let reqdata = document.getElementsByClassName('prices')[i].innerHTML;
+                document.getElementsByClassName('quantitys')[i].innerHTML=localStorage.getItem(`quantitys${i}`);
+                document.getElementsByClassName('totalprices')[i].innerHTML="₹ " + (Number(localStorage.getItem(`quantitys${i}`))*Number(reqdata));
+                totalcarts = totalcarts + (Number(localStorage.getItem(`quantitys${i}`))*Number( document.getElementsByClassName('prices')[i].innerHTML));
+                
+            }
+        }
+
+        for(i=0;i<5;i++)
+        {
+            if( (localStorage.getItem(`quantityn${i}`)==0) || (localStorage.getItem(`quantityn${i}`)==null))
+            {
+                document.getElementsByTagName('tr')[i+11].style.display = "none"
+            }
+            else
+            {
+                let reqdata = document.getElementsByClassName('pricen')[i].innerHTML;
+                document.getElementsByClassName('quantityn')[i].innerHTML=localStorage.getItem(`quantityn${i}`);
+                document.getElementsByClassName('totalpricen')[i].innerHTML="₹ " + (Number(localStorage.getItem(`quantityn${i}`))*Number(reqdata));
+                totalcartn = totalcartn + (Number(localStorage.getItem(`quantityn${i}`))*Number( document.getElementsByClassName('pricen')[i].innerHTML));
+                
+            }
+        }
+
+        for(i=0;i<5;i++)
+        {
+            if( (localStorage.getItem(`quantityp${i}`)==0) || (localStorage.getItem(`quantityp${i}`)==null))
+            {
+                document.getElementsByTagName('tr')[i+16].style.display = "none"
+            }
+            else
+            {
+                let reqdata = document.getElementsByClassName('pricep')[i].innerHTML;
+                document.getElementsByClassName('quantityp')[i].innerHTML= localStorage.getItem(`quantityp${i}`);
+                document.getElementsByClassName('totalpricep')[i].innerHTML= "₹ " + (Number(localStorage.getItem(`quantityp${i}`))*Number(reqdata));
+                totalcartp = totalcartp + (Number(localStorage.getItem(`quantityp${i}`))*Number( document.getElementsByClassName('pricep')[i].innerHTML));
+                
+            }
+        }
+
+        for(i=0;i<5;i++)
+        {
+            if( (localStorage.getItem(`quantityd${i}`)==0) || (localStorage.getItem(`quantityd${i}`)==null))
+            {
+                document.getElementsByTagName('tr')[i+21].style.display = "none"
+            }
+            else
+            {
+                var reqdata = document.getElementsByClassName('priced')[i].innerHTML;
+                document.getElementsByClassName('quantityd')[i].innerHTML=localStorage.getItem(`quantityd${i}`);
+                document.getElementsByClassName('totalpriced')[i].innerHTML= "₹ " + (Number(localStorage.getItem(`quantityd${i}`))*Number(reqdata));
+                totalcartd = totalcartd + (Number(localStorage.getItem(`quantityd${i}`))*Number( document.getElementsByClassName('priced')[i].innerHTML));
+                
+            }
+        }
+       let totalamount = (totalcartc+totalcarts+totalcartn+totalcartp+totalcartd);
+        document.getElementsByClassName('totalcv')[0].innerHTML = "₹ " + totalamount;
+        document.getElementsByClassName('gst')[0].innerHTML= "₹ " + 0.05*totalamount;
+        document.getElementsByClassName('tpd')[0].innerHTML= "₹ " + Math.floor(((0.05*totalamount)+25+totalamount));
+        
+        if(totalamount==0)
+        {
+            document.getElementsByTagName('tr')[0].style.display = "none";
+            document.getElementsByClassName('farebreakup')[0].style.display = "none";
+            document.getElementsByClassName('paynow')[0].style.display = "none";
+            document.getElementsByClassName('empty')[0].style.display = "block";
+        }
+    </script>
+</body>
+</html>

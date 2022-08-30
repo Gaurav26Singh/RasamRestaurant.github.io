@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Rasam</title>
+    <link rel="shortcut icon" href="imageedit_1_8852949157.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body
+        {
+            background: url(mitchell-luo-xREzOtWzDrQ-unsplash.jpg);
+            background-position: center;
+            background-size:100% 100vh;
+            background-repeat: no-repeat;
+        }
+        .contactdata
+        {
+            width: 90%;
+            height: 77vh;
+            margin: auto;
+            padding: 30px 0 30px 0;
+            margin-top: 10px;
+        }
+
+        .cd
+        {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            
+        }
+
+        .cd .logo
+        {
+            background-color: black;
+            padding: 18px;
+            position: relative;
+            left: 67.5px;
+            border-radius: 100%;
+            font-size: 35px;
+            z-index: 0;
+        }
+        .cd .data
+        {
+            background-color: white;
+            width: 500px;
+            border:2px solid black;
+            border-bottom-right-radius: 50px;
+            border-top-right-radius: 50px;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            text-align: center;
+            padding-top:18px;
+            font-size: 20px;
+            font-family: 'Acme', sans-serif;
+        }
+        .cd .data:hover
+        {
+            box-shadow: 0 0 25px blueviolet;
+        }
+        #address
+        {
+            color: red;
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+        .deck
+        {
+            text-decoration: none;
+            color: black;
+        }
+
+        #contact
+        {
+            color: black;
+                background-color: rgb(240, 168, 116);
+        }
+        .cartvalue
+        {
+            position:absolute;
+            color:white;
+            background-color: crimson;
+            padding: 2px 7px 2px 7px;
+            border-radius: 50%;
+            top: 2vh;
+            
+        }
+       
+        @media(max-width:850px)
+        {
+            .contactdata
+            {
+                margin-top: 90px;
+                height: 77vh;
+                
+            }
+            .cd
+            {
+                margin-bottom: 35px;
+            }
+            #fdata
+            {
+                padding-left: 25px;
+            }
+            #adata
+            {
+                padding-left: 45px;
+            }
+
+            #contact
+            {
+                color: white;
+                background-color: black;
+            }
+            
+            .cartvalue
+        {
+           
+            right: 0.3vw;
+            top: 0.8vh;
+            padding: 2.5px 6px 2.5px 6px;
+            font-size: 13px;
+        }
+
+        }
+     
+        @media(max-width:450px)
+        {
+            .contactdata
+            {
+                margin-top: 100px;
+                margin-left: -7px;
+            }
+
+           
+
+        }
+    </style>
+       
+</head>
+<body>
+    <div class="secondary">
+        <div class="display"><a href="index.html"><img src="https://rasamrest.com/wp-content/uploads/2018/08/mainlogo.png" alt=""></a></div>
+        <div class="sbox">
+            <input type="search" id="search" placeholder="Search for all kinds of Dishes & Cuisines......">
+        </div>
+        <a href="cart.html">
+            <i class="fa-solid fa-cart-shopping" id="cart"></i>
+            <div class="cartvalue">0</div>
+        </a>
+   
+
+    </div>
+    <div class="pos">
+        <button class="but" onclick="run()"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <header>
+
+        <ul class="nav">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;Home</a></li>
+            <li><a href="services.html"><i class="fa-brands fa-servicestack"></i>&nbsp;&nbsp;Services</a></li>
+            <li><a href="celebrate.html" id="celebrate"><i class="fa-solid fa-cake-candles"></i></i>&nbsp;&nbsp;Celebrate</a></li>
+            <li><a href="outlet.html"><i class="fa-solid fa-store"></i>&nbsp;&nbsp;Outlets</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-bullhorn"></i>&nbsp;&nbsp;About Us</a></li>
+            <li><a href="contact.html" id="contact"><i class="fa-solid fa-headset"></i>&nbsp;&nbsp;Contact Us</a></li>
+            <div class="social"> <a href="https://api.whatsapp.com/send?phone=7667477957"><i class="fa-brands fa-whatsapp" id="what"></i></a><i class="fa-brands fa-facebook"
+                    id="face"></i><i class="fa-brands fa-instagram" id="insta"></i><i class="fa-brands fa-twitter"
+                    id="tweet"></i></div>
+        </ul>
+        <div class="pos2">
+            <button class="but2" onclick="back()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </header>
+    <br>
+    <div class="contactdata">
+        <a href="https://api.whatsapp.com/send?phone=7667477957" class="deck">
+        <div class="cd">
+
+            <div class="logo"><i class="fa-brands fa-whatsapp" id="what"></i></div>
+            <div class="data">7667477957</div>
+        </div>
+    </a>
+        <div class="cd">
+            <div class="logo"><i class="fa-brands fa-facebook"
+                id="face"></i></div>
+            <div class="data" id="fdata">www.facebook.in</div>
+        </div>
+        <div class="cd">
+            <div class="logo"><i class="fa-brands fa-instagram" id="insta"></i></div>
+            <div class="data">Instagram</div>
+        </div>
+        <a href="https://goo.gl/maps/BmNLdYHCFrtJTxMCA" target="_blank" class="deck">
+        <div class="cd">
+            <div class="logo"><i class="fa-solid fa-location-dot" id="address"></i></div>
+            <div class="data" id="adata">Kumhrar,Patna,Bihar</div>
+        </div>
+    </a>
+        </div>
+    </div>
+    <footer>
+        <div class="footerdata"><i class="fa-regular fa-copyright" id="cr"></i> 2022 Rasam Restaurant &nbsp;| &nbsp;Designed by - <span class="person">Gaurav Singh &nbsp;|</span><span class="footsocial"><a href="https://api.whatsapp.com/send?phone=7667477957"><i class="fa-brands fa-whatsapp" id="what"></i></a><i class="fa-brands fa-facebook" id="face"></i><i class="fa-brands fa-instagram" id="insta"></i><i class="fa-brands fa-twitter"
+            id="tweet"></i><a href="mailto:gauravsinghgyan26@gmail.com"><i class="fa-regular fa-envelope" id="mail"></i></a></span></div>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+        let totalrep = document.getElementsByClassName('cartvalue')[0];
+        totalrep.innerHTML= Number(localStorage.getItem("totalvalues"))+ Number(localStorage.getItem("totalvaluep")) +Number(localStorage.getItem("totalvaluen"))+ Number(localStorage.getItem("totalvaluec"))+Number(localStorage.getItem("totalvalued"));
+   </script>
+   
+</body>
+</html>

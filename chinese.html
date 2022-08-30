@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese | Rasam</title>
+    <link rel="shortcut icon" href="imageedit_1_8852949157.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+          body
+        {
+            background: url(pawel-czerwinski-nyJY9UZnkrE-unsplash.jpg);
+            background-position: center;
+            background-size: 100%,100vh;
+        }
+        .chinesemenu
+        {
+            width: 98.7vw;
+            height: fit-content;
+            padding: 15px 0 15px 0;
+            
+        }
+        .virtualwaiter
+        {
+            height: 40px;
+            width:33.3%;
+            font-size: 27px;
+            border: 1px solid black;
+        }
+        .quantity
+        {
+            height: 40px;
+            width:33.4%;
+            text-align: center;
+            padding-top: 8px;
+            font-weight: bold;
+            font-size: 17px;
+            border:1px solid black;
+            background-color: whitesmoke;
+        }
+        .testing
+        {
+            display: flex;
+            
+        }
+        .order
+        {
+            display: flex;
+            width: fit-content;
+            margin: auto;
+            margin-bottom: 25px;
+            background-image: url(https://images.unsplash.com/photo-1525946746634-e3347053faa9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+            background-size: cover;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            padding: 14px;
+            
+        }
+        .chinimage img
+        {
+            height: 200px;
+            width: 180px;
+        }
+        .discription
+        {
+            background-color:rgb(208, 198, 198);
+            height: 200px;
+            width: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 10px;
+        }
+        #add
+        {
+            background-color: rgb(68, 249, 68);
+        }
+        #sub
+        {
+            background-color: rgb(255, 60, 60);
+        }
+        .detail h3
+        {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .detail p
+        {
+            text-align: center;
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+        .detail b
+        {
+            margin-top: 12px;
+            display: block;
+           text-align: center;
+            font-size: 20px;
+        }
+        .cartvalue
+        {
+            position:absolute;
+            color:white;
+            background-color: crimson;
+            padding: 2px 7px 2px 7px;
+            border-radius: 50%;
+            right: 2vw;
+            top: 2vh;
+            
+        }
+        .banner h1
+        {
+            width: 98%;
+            margin: auto;
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 5px 0 5px 0;
+            background-color: rgb(184, 108, 255);
+            border: 2px solid black;
+        }
+        .quicklink
+        {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            margin-left: 25px;
+            line-height: 45px;
+        }
+        .quicklink h2
+        {
+            margin-left: -15px;
+            font-size: 22px;
+        }
+        .quicklink a
+        {
+            text-decoration: none;
+            font-size: 18px;
+           color: blue;
+           font-weight: bold;
+           
+        }
+
+        @media(max-width:850px)
+        {
+
+            .banner
+            {
+                margin-left: 105px;
+            }
+            
+            .banner h1
+            {
+                margin-left: -25px;
+            }
+            .chinesemenu
+            {
+                width: 96vw;
+               margin-left: -7px;
+            }
+            .cartvalue
+        {
+           
+            right: 0.3vw;
+            top: 0.8vh;
+            padding: 2.5px 6px 2.5px 6px;
+            font-size: 13px;
+        }
+
+        
+        }
+        @media(max-width:750px)
+        {
+            .banner
+            {
+                margin-left: 25px;
+            }
+            .chinesemenu
+            {
+                margin-left: 25px;
+            }
+
+            .chinesemenu
+            {
+                margin-top: 50px;
+                
+            }
+       
+        
+        }
+        @media(max-width:680px)
+        {
+            .banner
+            {
+                margin-left: 60px;
+               margin-top: 30px;
+               justify-self: center;
+            }
+         
+
+        .chinesemenu
+            {
+                margin-left: -13px;
+            }
+
+        .quicklink
+        {
+            position: absolute;
+            top: 140px;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            width: 95vw;
+            margin: auto;
+        }
+         .quicklink h2
+         {
+            display: none;
+         }
+
+         .quicklink a
+         {
+            font-size: 16px;
+            
+         }
+        }
+
+        @media(max-width:490px)
+        {
+           
+            .banner
+            {
+                margin:auto;
+                margin-top: 100px;
+            }
+
+            .quicklink a
+         {
+            font-size: 11.5px;
+            
+         }
+            .banner h1
+            {
+                margin-left: 3px;
+                font-size: 25px;
+            }
+            .chinesemenu
+            {
+                width: 96vw;
+                padding: 0;
+                margin-left: -10px;
+                margin: auto;
+                margin-top: 70px;
+                
+               
+            }
+            .discription
+        {
+        
+            width: 144px;
+           
+        }
+      
+        .order
+        {
+            background: none;
+            box-shadow: none;
+            padding-bottom: 15px;
+            margin:auto;
+        }
+        .virtualwaiter
+        {
+            height: 30px;
+            width:33.3%;
+            font-size: 19px;
+            border: 1px solid black;
+        }
+        .quantity
+        {
+            height: 30px;
+            padding-top: 5px;
+            font-size: 15px;
+        }
+        .detail p
+        {
+            text-align: center;
+            font-size: 14px;
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+        .detail b
+        {
+            font-size: 15px;
+        }
+        }
+    </style>
+       
+</head>
+<body>
+    <div class="secondary">
+        <div class="display"><a href="index.html"><img src="https://rasamrest.com/wp-content/uploads/2018/08/mainlogo.png" alt=""></a></div>
+        <div class="sbox">
+            <input type="search" id="search" placeholder="Search for all kinds of Dishes & Cuisines......">
+        </div>
+        <a href="cart.html">
+            <i class="fa-solid fa-cart-shopping" id="cart"></i>
+            <div class="cartvalue">0</div>
+        </a>
+   
+
+    </div>
+    <div class="pos">
+        <button class="but" onclick="run()"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <header>
+
+        <ul class="nav">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;Home</a></li>
+            <li><a href="services.html"><i class="fa-brands fa-servicestack"></i>&nbsp;&nbsp;Services</a></li>
+            <li><a href="celebrate.html" id="celebrate"><i class="fa-solid fa-cake-candles"></i></i>&nbsp;&nbsp;Celebrate</a></li>
+            <li><a href="outlet.html"><i class="fa-solid fa-store"></i>&nbsp;&nbsp;Outlets</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-bullhorn"></i>&nbsp;&nbsp;About Us</a></li>
+            <li><a href="contact.html" id="contact"><i class="fa-solid fa-headset"></i>&nbsp;&nbsp;Contact Us</a></li>
+            <div class="social"><a href="https://api.whatsapp.com/send?phone=7667477957"><i class="fa-brands fa-whatsapp" id="what"></i></a><i class="fa-brands fa-facebook"
+                    id="face"></i><i class="fa-brands fa-instagram" id="insta"></i><i class="fa-brands fa-twitter"
+                    id="tweet"></i></div>
+        </ul>
+        <div class="pos2">
+            <button class="but2" onclick="back()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </header>
+    <br>
+    
+    <div class="chinesemenu">
+        <div class="banner"><h1>Chinese Dishes</h1></div>
+        <div class="quicklink">
+            <h2>Quick Link</h2>
+            <a href="chinese.html">Chinese</a>
+            <a href="southindian.html">South Indian</a>
+            <a href="northindian.html">North Indian</a>
+            <a href="pizza.html">Pizzas</a>
+            <a href="dessert.html">Dessserts</a>
+        </div>
+    <div class="order">
+        <div class="chinimage">
+            <img src="https://www.awesomecuisine.com/wp-content/uploads/2008/02/Paneer_Manchurian.jpg" alt="">
+        </div>
+        <div class="discription">
+            <div class="detail"><h3>Veg Manchurian</h3>
+            <p>Well fried 8 veg manchurian balls with gravey<br></p>
+            <b>₹ 180</b> 
+        </div>
+            <div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(0)">-</button>
+                <div class="quantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(0)">+</button>
+            </div>
+        </div>
+    </div>
+    <div class="order">
+        <div class="chinimage">
+            <img src="https://cdn1.foodviva.com/static-content/food-images/chinese-recipes/veg-hakka-noodles/veg-hakka-noodles.jpg" alt="">
+        </div>
+        <div class="discription">
+            <div class="detail"><h3>Veg Noodles</h3>
+            <p>Well fried, non sticky & spicy noodles.<br><br></p>
+            <b>₹ 120</b> 
+        </div>
+            <div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(1)">-</button>
+                <div class="quantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(1)">+</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="order">
+        <div class="chinimage">
+            <img src="https://resize.indiatvnews.com/en/resize/oldbucket/715_-/lifestylelifestyle/IndiaTv94add1_momos-main-pic.jpg" alt="">
+        </div>
+        <div class="discription">
+            <div class="detail"><h3>Veg Momos</h3>
+            <p>Well steamed 10 momos with super spicy chutney.<br></p>
+            <b>₹ 150</b> 
+        </div>
+            <div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(2)">-</button>
+                <div class="quantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(2)">+</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="order">
+        <div class="chinimage">
+            <img src="https://ranveerbrar.com/wp-content/uploads/2021/02/Manchow-soup_Fotor-scaled.jpg" alt="">
+        </div>
+        <div class="discription">
+            <div class="detail"><h3>Veg Manchaw Soup</h3>
+            <p>Very delicious & spicy soup with authentic chinese taste<br></p>
+            <b>₹ 100</b> 
+        </div>
+            <div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(3)">-</button>
+                <div class="quantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(3)">+</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="order">
+        <div class="chinimage">
+            <img src="https://i.pinimg.com/originals/62/16/5c/62165c16730766bcc2715b2e591b153f.jpg" alt="">
+        </div>
+        <div class="discription">
+            <div class="detail"><h3>Honey Chilli Potato</h3>
+            <p>Veg Chinese starter. Made with fried potatoes, honey and chili sauce.<br></p>
+            <b>₹ 130</b> 
+        </div>
+            <div class="testing">
+                <button id="sub" class="virtualwaiter" onclick="sub(4)">-</button>
+                <div class="quantity">0</div>
+                <button id="add" class="virtualwaiter" onclick="add(4)">+</button>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footerdata"><i class="fa-regular fa-copyright" id="cr"></i> 2022 Rasam Restaurant &nbsp;| &nbsp;Designed by - <span class="person">Gaurav Singh &nbsp;|</span><span class="footsocial"><a href="https://api.whatsapp.com/send?phone=7667477957"><i class="fa-brands fa-whatsapp" id="what"></i></a><i class="fa-brands fa-facebook" id="face"></i><i class="fa-brands fa-instagram" id="insta"></i><i class="fa-brands fa-twitter"
+        id="tweet"></i><a href="mailto:gauravsinghgyan26@gmail.com"><i class="fa-regular fa-envelope" id="mail"></i></a></span></div>
+</footer>
+    <script type="text/javascript" src="script.js"></script>
+    <script>
+        let count = [0,0,0,0,0];
+        let totalc = 0;
+        let totalrep = document.getElementsByClassName('cartvalue')[0];
+        for(i=0;i<5;i++)
+        {
+            if(localStorage.getItem(`quantityc${i}`)==null)
+            {
+            localStorage.setItem(`quantityc${i}`,0);
+            }
+        }
+        function add(i)
+        {
+            count[i]++;
+            
+            if(count[i]>5)
+            {
+                count[i]--;
+                alert("Any dish cannot be added more than 5");
+            }
+            else{
+                
+                var quantityc = document.getElementsByClassName('quantity')[i];
+                localStorage.setItem(`quantityc${i}`,count[i]);
+                quantityc.innerHTML = count[i];
+                 helpme();
+                
+            }
+        }
+        function sub(i)
+        {
+            count[i]--;
+            if(count[i]<0)
+            {
+                count[i]=0;
+            }
+            if(count[i]==5)
+            {
+                count[i]--;
+            }
+
+            var quantityc = document.getElementsByClassName('quantity')[i];
+            localStorage.setItem(`quantityc${i}`,count[i]);
+                quantityc.innerHTML =  count[i];
+                helpme();
+        }
+        
+        function helpme()
+        {
+            totalc=0;
+            for(t=0;t<5;t++)
+        {
+            totalc = totalc + Number(count[t]);
+        }
+        localStorage.setItem("totalvaluec",totalc);
+        
+        totalrep.innerHTML= Number(localStorage.getItem("totalvalues"))+ Number(localStorage.getItem("totalvaluep")) +Number(localStorage.getItem("totalvaluen"))+ Number(localStorage.getItem("totalvaluec"))+Number(localStorage.getItem("totalvalued"));
+        }
+        totalc=0;
+        for(i=0;i<5;i++)
+        {
+            
+            var localdata = document.getElementsByClassName('quantity')[i];
+            count[i]=localStorage.getItem(`quantityc${i}`);
+            totalc = totalc + Number(count[i]);
+            localdata.innerHTML = localStorage.getItem(`quantityc${i}`);
+            
+        }
+        localStorage.setItem("totalvaluec",totalc);
+
+        totalrep.innerHTML= Number(localStorage.getItem("totalvalues"))+ Number(localStorage.getItem("totalvaluep")) +Number(localStorage.getItem("totalvaluen"))+ Number(localStorage.getItem("totalvaluec"))+Number(localStorage.getItem("totalvalued"));
+    </script>
+</body>
+</html>
